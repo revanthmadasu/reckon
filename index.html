@@ -1,0 +1,130 @@
+<html>
+    <head>
+        <title>
+            Predictor
+        </title>
+
+        <link rel="icon" href="images/favicon.gif" type="image/gif" sizes="32x32">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script>
+            function CheckPassword(inputtxt) 
+            { 
+                var pwd=inputtxt.value;
+                
+            }
+
+        </script>
+        <style>
+        #header 
+        {
+            position: fixed;
+            width: 80%;
+            top: 3%;
+            right:10%;
+            left:10%;
+            align:center;
+        }
+        #content
+        {
+            top: 50%;
+        }
+        </style>
+        </head>
+
+    <body>
+            <header role="banner" id="header">
+        <nav class="navbar navbar-static-top navbar-inverse" style="background:#000000;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+             <ul class="nav navbar-nav navbar-left ">
+                 <li><image src="images/logo.png"></image></li> 
+                <li><h3 style="font-family: 'Pacifico', cursive; color:white" align="justify">&nbspPredictor</h3></li>
+             </ul> 
+            </div>
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            <div class="collapse navbar-collapse navHeaderCollapse">
+             <ul class="nav navbar-nav navbar-right ">
+                <li><a data-target="#loginModal" data-toggle="modal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a data-target="#signupModal" data-toggle="modal"><span class="glyphicon glyphicon-user"></span> SignUp</a></li>
+            </ul>
+            </div>
+         </div>
+         </nav>
+              </header>
+<!-- Login Modal -->
+         <div class="modal fade" id="loginModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Login</h4>
+      </div>
+      <div class="modal-body">
+        <form name="form1" action="login.php" method="POST">
+        <input type="text" name="id"placeholder="Email Id">
+        <input type="password" name="password"placeholder="Password">
+        <div class="modal-footer">
+          <button class="submit" onClick="CheckPassword(document.form1.password)">Submit</button>
+        </div>
+        </form>
+  </div>
+</div> 
+</div>
+</div>
+ <!-- END OF LOGIN Modal -->
+
+<!-- signupModal -->
+        <div class="modal fade" id="signupModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">SignUp</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form action="signup.php" name="form1" method="POST">
+                            <input type="text" name="name" placeholder="Enter Name"><br><br>
+                            <input type="text" name="emailid" placeholder="Enter email"><br><br>
+                            <input type="phone" name="phone" placeholder="Enter Phone"><br><br>
+                            <input type="password" name="password" placeholder="Enter password" onkeydown="CheckPassword(document.form1.password)"><p id="ppwd"></p><br>
+                            <input type="password" name="cpassword" placeholder="Confirm Password"><p id="pcpwd"></p><br><br>
+                            <div class="modal-footer">
+                                <button class="submit">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- End of SignUp Modal -->
+         <br><br><br>
+         <div class="container-fluid" id="content">
+                     <h3>
+                     The purpose of the Myers-Briggs Type Indicator® (MBTI®) personality inventory is to make the theory of psychological types described by C. G. Jung understandable and useful in people's lives. The essence of the theory is that much seemingly random variation in the behavior is actually quite orderly and consistent, being due to basic differences in the ways individuals prefer to use their perception and judgment.
+                     </h3>
+                     <p>
+                     <b>Favorite world:</b> Do you prefer to focus on the outer world or on your own inner world? This is called Extraversion (E) or Introversion (I).
+                     </p>
+                     <p>
+                     <b>Information:</b> Do you prefer to focus on the basic information you take in or do you prefer to interpret and add meaning? This is called Sensing (S) or Intuition (N).
+                     </p>
+                     <p>
+                     <b>Decisions:</b> When making decisions, do you prefer to first look at logic and consistency or first look at the people and special circumstances? This is called Thinking (T) or Feeling (F)
+                     </p>
+                     <p>
+                     <b>Structure:</b> In dealing with the outside world, do you prefer to get things decided or do you prefer to stay open to new information and options? This is called Judging (J) or Perceiving (P).
+                     </p>
+         </div>
+
+</body>
+</html>
+
+
